@@ -1,0 +1,574 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+}
+/* -------------------utility classes----------------- */
+ul li{
+    list-style: none;
+}
+.container{
+    max-width: 1200px;
+    width: 80%;
+    margin: 0 auto;
+}
+.lg_heading{
+    font-size: 3.5rem;
+}
+.md_heading{
+    font-size: 2.2rem;
+}
+.text_red{
+    color: #de1b1b;
+}
+.text_light{
+    color:#f4f4f4;
+}
+.text_black{
+    color: #333333;
+}
+.text_gray{
+    color: #555555;
+}
+.btn{
+    display: inline-block;
+    padding: 0.5em 1.5em;
+    margin: 0.5em 0;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.btn_primary{
+    background-color: #f4f4f4;
+    text-decoration: none;
+    border-radius: 10em;
+}
+.btn_primary:hover{
+    background-color: #dddddd;
+}
+.btn_secondary{
+    font-size: 1.4rem;
+    border: 2px solid #de1b1b;
+    text-decoration: none;
+    border-radius: 1.5em;
+}
+.btn_secondary:hover{
+    background: #f2f3f4;
+}
+.bg_dark{
+    background: rgba(0, 0, 0, 0.845);
+    color: white;
+}
+/* -----------------Header Section----------------- */
+.header{
+    height: 90vh;
+    background: radial-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('../img/header-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.navbar .logo{
+    float: left;
+}
+.navbar .nav_items{
+    float: right;
+}
+.navbar::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.navbar .nav_items{
+    display: inline;
+    margin-top: 1rem;
+}
+.navbar .nav_item{
+    display: inline-block;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+.nav_item a{
+    text-decoration: none;
+}
+a{
+    font-size: 1.6rem;
+}
+p,li{
+    font-size: 1.6rem;
+    margin-bottom: 0.5em;
+    letter-spacing: 0.15em;
+}
+
+h1, h2, h3{
+    margin-bottom: 0.5em;
+    letter-spacing: 0.15em;
+    font-weight: 500;
+}
+.navbar a{
+    padding-bottom: .3rem;
+}
+.navbar a:hover{
+    border-bottom: 1px solid #f4f4f4;
+}
+.header_content h1{
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.header_content p{
+    text-transform: uppercase;
+}
+.header_content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2));
+}
+/* -----------------------------Showcase Section-------------------- */
+.showcase{
+    background: #dddddd;
+    padding: 10rem 0;
+}
+.row{
+    background: white;
+    height: 350px;
+    box-shadow: 0px 0px 20px #aaaaaa;
+}
+.row1{
+    margin-bottom: 10rem;
+}
+.text_box{
+    height: 100%;
+    padding: 3rem;
+}
+.img_box{
+    height: 100%;
+}
+.row1 .img_box,.row2 .text_box{
+    float: left;
+    width: 50%;
+}
+.row2 .img_box,.row1 .text_box{
+    float: right;
+    width: 50%;
+}
+.row .img_box img{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.row::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+/* --------------------Features------------------- */
+.features{
+    padding: 10rem 0;
+}
+.box_wraper{
+    box-shadow: 0px 0px 20px 0px #00000035;
+}
+.box_wraper .box{
+    width: 33.3333333333333%;
+    float: left;
+    padding: 3em;
+    text-align: center;
+}
+.box_wraper::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.box1,.box3{
+    background: rgba(0, 0, 0, 0.845);
+    color: white;
+}
+.box2{
+    background: linear-gradient(30deg, rgb(214, 18, 97) 11%, rgba(255,0,0,1) 99%);
+    color: white;
+}
+/* --------------------footer----------------------- */
+.footer{
+    background: rgba(0, 0, 0, 0.845);
+    color: white;
+    padding: 2em;
+    text-align: center;
+}
+.social_icons i{
+    margin: 0.5em;
+}
+/* -----------------------About us----------------- */
+.about{
+    padding: 5rem 0;
+}
+/* .about .about_heading{
+    border-bottom: 0.15em solid #de1b1b ;
+} */
+.about_heading::after{
+    content: '';
+    display: block;
+    border-bottom: 0.12em solid #de1b1b ;
+    width: 100%;
+}
+.about_wraper .left{
+    float: left;
+    width: 50%;
+}
+.about_wraper .right{
+    float: right;
+    width: 50%;
+}
+.about_wraper{
+    text-align: center;
+    margin-top: 2em;
+}
+.about_wraper::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.about_wraper li::before{
+    content: '\2764';
+    color: #de1b1b;
+    font-weight: bold;
+    margin-right: 1em;
+}
+/* -------------count part------------ */
+.count_about{
+    text-align: center;
+    margin-top: 2rem;
+}
+.count_about .count_item{
+    float: left;
+    width: 25%;
+    font-weight: bold;
+}
+.count_about::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+/* ---------------contact button------------ */
+.contact_banner{
+    background: linear-gradient(30deg, rgb(214, 18, 97) 11%, rgba(255,0,0,1) 99%);
+    color: white;
+    padding: 2rem;
+    font-weight: 500;
+    margin-top: 3em;
+    
+}
+.contact_banner a{
+    text-decoration: none;
+    color: white;
+}
+.contact_banner .contact_banner_left{
+    float: left;
+    width: 60%;
+}
+.contact_banner .contact_banner_right{
+    float: right;
+    width: 40%;
+    text-align: right;
+}
+.contact_banner::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.btn-contact{
+    padding: 0.5em 2.5em;
+    border: 0.2em solid white;
+    text-align: center;
+    letter-spacing: .5rem;
+}
+/* -----------------Contact Page------------ */
+.contact{
+    padding: 5em 0;
+    background: #dddddd;
+}
+.contact_wraper::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.contact_wraper .contact_address{
+    height: 750px;
+    background: white;
+    float: left;
+    width: 49%;
+    padding: 1rem;
+}
+.contact_address i{
+    display: inline-block;
+    margin-right: 1rem;
+}
+.contact_address h2{
+    display: inline-block;
+}
+.contact_address .address_line{
+    margin-bottom: 2rem;
+}
+.contact_wraper .contact_address img{
+    max-width: 90%;
+    min-height: 40em;
+    object-fit: cover;
+    object-position: right;
+}
+/* -------------form------------ */
+.contact_wraper .form{
+    height: 750px;
+    font-size: 1.6rem;
+    background: white;
+    float: right;
+    width: 49%;
+    padding: 1rem;
+}
+.contact_wraper .form h1::after{
+    content: '';
+    display: block;
+    clear: both;
+    border: .2rem solid #de1b1b;
+    width: 100%;
+}
+.contact_wraper .form label{
+    display: block;
+}
+.contact_wraper .form input{
+    padding: 0.5rem;
+    width: 100%;
+}
+.contact_wraper .form .form_group{
+    margin-bottom: 1rem;
+}
+.contact_wraper .form label::after{
+    content: '* ';
+    color: #de1b1b;
+}
+.contact_wraper .form textarea{
+    padding: 1rem;
+    width: 100%;
+    height: 300px;
+}
+.btn_contact{
+    display: block;
+    margin: 0 auto;
+    background: #de1b1b;
+    color: white;
+    padding: 0.5rem 3rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+/* ------------Media Querie---------------------- */
+@media (max-width:500px){
+    .btn{
+        display: inline-block;
+        padding: 0.5em 1.5em;
+        margin: 0.5em 0;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+    :root{
+        font-size: 50%;
+    }
+    a{
+        font-size: 1.2rem;
+    }
+    p,li{
+        font-size: 1.6rem;
+        margin-bottom: 0.4em;
+        letter-spacing: 0.12em;
+    }
+    
+    h1, h2, h3{
+        margin-bottom: 0.4em;
+        letter-spacing: 0.12em;
+        font-weight: 400;
+    }
+    .navbar .logo,.navbar .nav_items{
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .header_content .main_heading{
+        display: none;
+    }
+    .row{
+        height: auto;
+        width: 100%;
+    }
+    .row .img_box,.row .text_box{
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+    .features .box{
+        float: none;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0px 0px 20px 0px #00000035;
+    }
+    .features .box3,.features .box2{
+        margin-top: 7rem;
+    }
+    .box_wraper{
+        box-shadow: none;
+    }
+    .lg_heading{
+        font-size: 3rem;
+        letter-spacing: 0.1rem;
+    }
+    .contact_banner .contact_banner_left,
+    .contact_banner .contact_banner_right{
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+    .count_about .count_item{
+        float: left;
+        width: 50%;
+        font-weight: bold;
+    }
+    .btn-contact{
+    padding: 0.2rem 1rem;
+    border: 0.2rem solid white;
+    text-align: center;
+    letter-spacing: .3rem;
+    }
+    .contact_wraper .contact_address{
+        float: none;
+        width: 100%;
+        height: auto;
+        margin-bottom: 5rem;
+    }
+    .contact_wraper .form{
+        float: none;
+        width: 100%;
+        height: auto;
+    }
+}
+@media (min-width:501px) and (max-width:768px){
+    :root{
+        font-size: 60%;
+    }
+    a{
+        font-size: 1.2rem;
+    }
+    p,li{
+        font-size: 1.6rem;
+        margin-bottom: 0.4em;
+        letter-spacing: 0.12em;
+    }
+    
+    h1, h2, h3{
+        margin-bottom: 0.4em;
+        letter-spacing: 0.12em;
+        font-weight: 400;
+    }
+    .navbar .logo,.navbar .nav_items{
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .header_content .main_heading{
+        display: none;
+    }
+    .row{
+        height: auto;
+        width: 100%;
+    }
+    .row .img_box,.row .text_box{
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+    .features .box{
+        float: none;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0px 0px 20px 0px #00000035;
+    }
+    .features .box3,.features .box2{
+        margin-top: 7rem;
+    }
+    .box_wraper{
+        box-shadow: none;
+    }
+    .lg_heading{
+        font-size: 3rem;
+        letter-spacing: 0.1rem;
+    }
+    .contact_banner .contact_banner_left,
+    .contact_banner .contact_banner_right{
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+    .count_about .count_item{
+        float: left;
+        width: 50%;
+        font-weight: bold;
+    }
+    .btn-contact{
+    padding: 0.2rem 1rem;
+    border: 0.2rem solid white;
+    text-align: center;
+    letter-spacing: .3rem;
+    }
+    .contact_wraper .contact_address{
+        float: none;
+        width: 100%;
+        height: auto;
+        margin-bottom: 5rem;
+    }
+    .contact_wraper .form{
+        float: none;
+        width: 100%;
+        height: auto;
+    }
+}
+@media (min-width:769px) and (max-width:1200px) {
+    :root{
+        font-size: 55%;
+    }
+    a{
+        font-size: 1.3rem;
+    }
+    p,li{
+        font-size: 1.6rem;
+        margin-bottom: 0.4em;
+        letter-spacing: 0.12em;
+    }
+    
+    h1, h2, h3{
+        margin-bottom: 0.4em;
+        letter-spacing: 0.12em;
+        font-weight: 400;
+    }
+    .btn-contact{
+        padding: 0.2rem 1rem;
+        border: 0.2rem solid white;
+        text-align: center;
+        letter-spacing: .3rem;
+    }
+}
+@media (orientation:landscape) and(max-width:500px) {
+    .header{
+        height: 90vh;
+    }
+}
