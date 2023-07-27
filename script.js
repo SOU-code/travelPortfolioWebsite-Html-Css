@@ -1,22 +1,16 @@
-const body = document.querySelector("body");
-const view = document.querySelector(".view");
-const y = body.scrollHeight;
-const y1 = window.innerHeight;
-console.log(y);
-console.log(y1);
-var d = y - y1;
-if (y<=y1) {
-  view.innerHTML = "100% viewed";
+// Function to calculate and update the scroll percentage
+function updateScrollPercentage() {
+  const scrollPercentageElement = document.getElementById("scrollPercentage");
+  // Calculate the percentage scrolled
+  const scrollableHeight =
+    document.documentElement.scrollHeight - window.innerHeight;
+  const scrolledPercentage = Math.round(
+    (window.scrollY / scrollableHeight) * 100
+  );
+  // Update the "view" element with the calculated percentage
+  scrollPercentageElement.textContent = scrolledPercentage + "% viewed";
+  // Attach event listener to the "scroll" event on the window
+  window.addEventListener("scroll", updateScrollPercentage);
+  // Call the function once on page load to display the initial scroll percentage
+  updateScrollPercentage();
 }
-document.addEventListener("scroll", function () {
-  const view = document.querySelector(".view");
-  const body = document.querySelector("body");
-  const headerCod = body.getBoundingClientRect().top;
-  console.log(headerCod);
-  const x = Math.floor((-headerCod / d) * 100);
-  if (x >= 100) {
-    view.innerHTML = "100% viewed";
-  } else {
-    view.innerHTML = x + "% viewed";
-  }
-});

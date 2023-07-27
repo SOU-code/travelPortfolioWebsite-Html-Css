@@ -11,7 +11,7 @@
     <script src="script.js" defer></script>
     <title>Travel Website | Home</title>
   </head>
-  <body>
+  <body onscroll="updateScrollPercentage()">
     <header class="header">
       <nav class="navbar">
         <div class="container">
@@ -29,7 +29,7 @@
           </ul>
         </div>
       </nav>
-      <div class="view">0% viewed</div>
+      <div class="view" id="scrollPercentage">0% viewed</div>
       <div class="header_content">
         <h1 class="lg_heading text_light main_heading">Travel The World</h1>
         <p class="text_light">
