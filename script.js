@@ -11,6 +11,4 @@ function updateScrollPercentage() {
   scrollPercentageElement.textContent = scrolledPercentage + "% viewed";
   // Attach event listener to the "scroll" event on the window
   window.addEventListener("scroll", updateScrollPercentage);
-  // Call the function once on page load to display the initial scroll percentage
-  updateScrollPercentage();
 }
